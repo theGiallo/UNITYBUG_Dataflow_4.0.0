@@ -2,12 +2,16 @@
 ### Missing Dataflow dll 4.0.0.0
 
 **Unity Version:** broken with 2021.2.12 up to 2021.3.2, works with 2021.2.0 up to 2021.2.11
-**What should happen:** Android build completes succesfully
+
+**What should happen:** Android build completes successfully
+
 **What happens:** Android build fails
+
 
 ## Triggered by
 
 We manually add the dll for System.Threading.Tasks.Dataflow in version 5.0.0 and build for Android IL2CPP, compatibility set to .Net Framework. The build fails with this error:
+
 
 ```
 Building Library\Bee\artifacts\Android\ManagedStripped failed with output:
@@ -36,6 +40,7 @@ UnityEngine.GUIUtility:ProcessEvent (int,intptr,bool&)
 ```
 
 This is the important part:
+
 ```
 Fatal error in Unity CIL Linker
 Mono.Cecil.AssemblyResolutionException: Failed to resolve assembly: 'System.Threading.Tasks.Dataflow, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null'
